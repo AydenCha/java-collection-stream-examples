@@ -12,8 +12,9 @@ public class Main {
     public static void main(String[] args) {
         List<String> names = List.of("김코딩", "이자바", "김스프링", "박해커");
 
-        // 1) 4장: 람다를 배우기 전이라 filter, map에 넘길 동작을 익명 클래스로 만들었습니다.
+        // 1) 4~5장: 람다를 배우기 전이라 filter, map에 넘길 동작을 익명 클래스로 만들었습니다.
         //    filter는 Predicate(boolean test), map은 Function(R apply)을 받습니다.
+        //    collect(Collectors.toList())는 5장에서 배운 최종 연산으로, 남은 요소를 List에 모읍니다.
         List<String> before = names.stream()
                 .filter(new Predicate<String>() {
                     @Override

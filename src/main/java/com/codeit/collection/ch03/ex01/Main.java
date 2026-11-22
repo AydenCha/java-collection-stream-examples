@@ -25,7 +25,7 @@ public class Main {
         Map<String, Integer> scores = new HashMap<>();
 
         // put(K, V)
-        // - 새로운 Key이면 저장
+        // - 새로운 Key이면 저장하고 null을 반환(이전 Value가 없으므로)
         // - 기존 Key이면 Value를 덮어쓰고 이전 Value를 반환
         scores.put("Alice", 90);
         scores.put("Bob", 85);

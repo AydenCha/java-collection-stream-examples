@@ -21,7 +21,7 @@ public class Main {
 
         // list.sort(정렬 기준): 정렬 기준(Comparator)을 넘겨 정렬합니다.
         // Collections.reverseOrder()는 "큰 값이 앞"이라는 정렬 기준을 만들어 돌려줍니다.
-        // 정렬 기준을 직접 만드는 방법은 뒤 장에서 배웁니다.
+        // 정렬 기준을 직접 만드는 방법은 8장에서 자세히 다룹니다.
         scores.sort(Collections.reverseOrder());
         System.out.println(scores); // [90, 85, 77, 65]
 

@@ -28,6 +28,7 @@ public class Main {
         // 첫 글자별로 묶기: containsKey + put
         Map<String, List<String>> groupBefore = new HashMap<>();
         for (String page : visits) {
+            // substring(0, 1): 0번 인덱스부터 1번 인덱스 앞까지 잘라 낸 문자열, 즉 첫 글자를 돌려줍니다.
             String initial = page.substring(0, 1);
             if (!groupBefore.containsKey(initial)) {
                 groupBefore.put(initial, new ArrayList<>());

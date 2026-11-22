@@ -7,7 +7,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         /*
-         * 1-4-2. 제네릭을 통한 타입 안전성
+         * 1-4-1. 제네릭을 통한 타입 안전성
          *
          * 제네릭(Generic)을 사용하면
          * 저장 가능한 타입을 컴파일 시점에 제한할 수 있습니다.

@@ -10,7 +10,9 @@ public class Main {
     public static void main(String[] args) {
         List<String> emails = List.of("a@codeit.com", "b@gmail.com", "c@codeit.com");
 
+        // contains("@"): 문자열 안에 "@"가 들어 있으면 true를 돌려줍니다.
         Predicate<String> isEmail = s -> s.contains("@");
+        // endsWith("@codeit.com"): 문자열이 "@codeit.com"으로 끝나면 true를 돌려줍니다.
         Predicate<String> isCodeit = s -> s.endsWith("@codeit.com");
 
         // and: 두 조건을 모두 만족해야 true인 새 Predicate를 만듭니다.
@@ -30,6 +32,7 @@ public class Main {
         System.out.println(otherCount); // 1
 
         // andThen: 앞 Function의 결과를 뒤 Function에 넘기는 새 Function을 만듭니다.
+        // trim(): 문자열 앞뒤의 공백을 지운 새 문자열을 돌려줍니다.
         Function<String, String> trim = s -> s.trim();
         Function<String, Integer> length = s -> s.length();
         Function<String, Integer> trimmedLength = trim.andThen(length);

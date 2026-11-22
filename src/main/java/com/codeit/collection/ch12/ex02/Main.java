@@ -62,17 +62,20 @@ public class Main {
                 .collect(Collectors.toMap(Product::getCode, p -> p));
         System.out.println(byCode.get("P002").getName()); // 마우스
 
-        // 3번: filter는 T -> boolean 모양, 곧 Predicate<T>를 받습니다.
+        // 3번: filter는 (T) -> boolean 모양, 곧 Predicate<T>를 받습니다.
         Predicate<String> startsWithA = s -> s.startsWith("A");
         System.out.println(startsWithA.test("Anna")); // true
 
         // 4번: s 말고 고정값 "A"도 넘기므로 Predicate 자리에 메서드 참조를 쓸 수 없습니다.
+        //      String::startsWith는 (String, String) -> boolean 모양(BiPredicate)이라
+        //      filter가 받는 (T) -> boolean 모양과 맞지 않습니다.
         // List.of("Anna", "Bob").stream().filter(String::startsWith); // 컴파일 오류
         long countA = List.of("Anna", "Bob").stream().filter(s -> s.startsWith("A")).count(); // 람다로 씁니다.
         System.out.println(countA); // 1
 
         // 5번: 같은 고객이 다시 나오면 Integer::sum으로 금액을 더합니다.
-        //      TreeMap::new를 넘겨 고객 이름 순서로 출력되게 했습니다.
+        //      네 번째 인자 TreeMap::new는 결과를 담을 Map을 정합니다.
+        //      10장 groupingBy의 가운데 인자와 같은 역할이고, 고객 이름 순서로 출력됩니다.
         List<Order> orders = List.of(new Order("민지", 12000), new Order("지훈", 5000), new Order("민지", 3000));
         Map<String, Integer> totalByToMap = orders.stream()
                 .collect(Collectors.toMap(Order::getCustomer, Order::getPrice, Integer::sum, TreeMap::new));
@@ -85,6 +88,8 @@ public class Main {
         System.out.println(totalByGrouping); // {민지=15000, 지훈=5000}
 
         // 6번: 조건 하나로 true(합격), false(불합격) 두 묶음으로 나눕니다.
+        //      partitioningBy도 groupingBy처럼 두 번째 인자로 다운스트림을 받습니다.
+        //      mapping(Student::getName, Collectors.toList())로 학생 객체 대신 이름만 담습니다.
         List<Student> students = List.of(new Student("서연", 85), new Student("도윤", 55), new Student("하준", 60));
         Map<Boolean, List<String>> passFail = students.stream()
                 .collect(Collectors.partitioningBy(s -> s.getScore() >= 60,

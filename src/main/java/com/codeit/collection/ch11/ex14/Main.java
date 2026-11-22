@@ -15,6 +15,7 @@ class Course {
 
 public class Main {
     public static void main(String[] args) {
+        // Map.of(키, 값): 수정할 수 없는 Map을 만듭니다(List.of의 Map 버전).
         Map<String, Course> byCode = Map.of("CS101", new Course("자바프로그래밍"));
 
         try {

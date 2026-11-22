@@ -11,7 +11,7 @@ public class Main {
 
         Object[] arr = new Object[3];
         arr[0] = "문자열";
-        arr[1] = 123;      // int 123은 Integer 객체로 자동 변환되어 들어갑니다(오토박싱).
+        arr[1] = 123;      // int 123은 Integer 객체로 자동 변환되어 들어갑니다(오토박싱, 1-4-2에서 다룹니다).
 
         System.out.println(arr[0]); // 문자열
         System.out.println(arr[1]); // 123

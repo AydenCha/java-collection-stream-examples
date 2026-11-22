@@ -1,23 +1,34 @@
 // 파일 이름: Main.java
 package com.codeit.collection.ch04.ex13;
 
-import java.util.Random;
-import java.util.function.IntConsumer;
-import java.util.stream.IntStream;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
-        // Random: 난수를 만드는 클래스입니다(java.util 패키지).
-        // ints(): int 난수를 끝없이 만들어 내는 IntStream을 돌려줍니다(무한 스트림).
-        IntStream stream = new Random().ints();
+        Map<String, Integer> scores = new HashMap<>();
+        scores.put("민지", 90);
+        scores.put("지훈", 75);
+        scores.put("수현", 85);
 
-        // limit(5): 앞에서 5개만 남기는 중간 연산입니다(8장에서 자세히 다룹니다). limit을 빼면 출력이 끝나지 않습니다.
-        // IntStream의 forEach에는 int 값을 그대로 받는 IntConsumer를 넘깁니다. 구현할 메서드는 void accept(int value)입니다.
-        stream.limit(5).forEach(new IntConsumer() {
-            @Override
-            public void accept(int value) {
-                System.out.println(value); // 실행할 때마다 다른 난수 5개가 출력됩니다.
-            }
-        });
+        // Map에는 stream()이 없으므로 keySet(), values(), entrySet()으로 컬렉션을 얻은 뒤 stream()을 호출합니다.
+        // keySet()은 키를 담은 Set이므로 keySet().stream()은 키의 스트림(Stream<String>)입니다.
+        // count(): 요소의 개수를 long으로 돌려주는 최종 연산입니다(8-4에서 다시 씁니다).
+        long keyCount = scores.keySet().stream().count();
+        System.out.println("키 개수 = " + keyCount); // 키 개수 = 3
+
+        // entrySet().stream()은 키-값 쌍(Map.Entry)의 스트림(Stream<Map.Entry<String, Integer>>)입니다.
+        // 그래서 filter에 넘기는 Predicate의 꺾쇠에도 요소 타입인 Map.Entry<String, Integer>를 적습니다.
+        // count는 개수만 세므로 HashMap의 순회 순서와 관계없이 결과가 같습니다.
+        long passCount = scores.entrySet().stream()
+                .filter(new Predicate<Map.Entry<String, Integer>>() {
+                    @Override
+                    public boolean test(Map.Entry<String, Integer> entry) {
+                        return entry.getValue() >= 80; // 값(점수)이 80 이상인 Entry만 남깁니다.
+                    }
+                })
+                .count();
+        System.out.println("80점 이상 = " + passCount); // 80점 이상 = 2
     }
 }

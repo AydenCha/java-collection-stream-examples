@@ -87,6 +87,7 @@ class MemberService {
         Optional<Insurance> insurance = Optional.of(new Insurance("Samsung direct"));
 
         // 2. 자동차 정보 생성 (보험 정보를 포함하여 Optional로 감쌈)
+        // 60_000_000처럼 숫자 사이에 _를 넣으면 자릿수를 읽기 쉽습니다. 값은 60000000과 같습니다(Java 7부터).
         Optional<Car> car = Optional.of(new Car("XC-60", 60_000_000, insurance));
 
         // 3. 최종 회원 객체를 생성하여 Optional로 반환

@@ -28,7 +28,7 @@ public class Main {
                 new Product("기계식 키보드", 45000),
                 new Product("USB 허브", 22000));
 
-        // 6장에서 쓴 람다식 버전
+        // 람다식 버전: 5장 4절 실습에서 익명 클래스로 쓴 filter, map, forEach를 람다식으로 바꾼 모양
         products.stream()
                 .filter(p -> p.getPrice() >= 20000)
                 .map(p -> p.getName())

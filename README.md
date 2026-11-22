@@ -28,7 +28,8 @@
 | `ch01/ex08` | 1-4-2. 래퍼 클래스(Wrapper Class) |
 | `ch01/ex09` | 1-4-2. 래퍼 클래스(Wrapper Class) |
 | `ch01/ex10` | 1-4-3. 크기 조절이 가능한 자료구조 |
-| `ch01/ex11` | 6. 컬렉션 간 변환 관계 |
+| `ch01/ex11` | 1-4-4. 다양한 편의 기능 제공 |
+| `ch01/ex12` | 6. 컬렉션 간 변환 관계 |
 
 ### 2장. List와 Set
 
@@ -88,14 +89,15 @@
 | `ch04/ex10` | 5-2. Stream.of() |
 | `ch04/ex11` | 5-3. IntStream의 유용한 기능들 |
 | `ch04/ex12` | 6. 컬렉션 기반 스트림 생성 |
-| `ch04/ex13` | 7-1. Random.ints()를 통한 무한 스트림 생성 |
-| `ch04/ex14` | 7-2. 지정된 크기의 난수 스트림 생성 |
-| `ch04/ex15` | 7-3. 특정 범위의 정수 스트림 생성 |
-| `ch04/ex16` | 8-1. filter()와 Predicate<T> |
+| `ch04/ex13` | 6. 컬렉션 기반 스트림 생성 |
+| `ch04/ex14` | 7-1. Random.ints()를 통한 무한 스트림 생성 |
+| `ch04/ex15` | 7-2. 지정된 크기의 난수 스트림 생성 |
+| `ch04/ex16` | 7-3. 특정 범위의 정수 스트림 생성 |
 | `ch04/ex17` | 8-1. filter()와 Predicate<T> |
-| `ch04/ex18` | 8-2. map()과 Function<T, R> |
-| `ch04/ex19` | 8-3. forEach()와 Consumer<T> |
-| `ch04/ex20` | 8-4. 세 연산 이어 쓰기 |
+| `ch04/ex18` | 8-1. filter()와 Predicate<T> |
+| `ch04/ex19` | 8-2. map()과 Function<T, R> |
+| `ch04/ex20` | 8-3. forEach()와 Consumer<T> |
+| `ch04/ex21` | 8-4. 세 연산 이어 쓰기 |
 
 ### 5장. 중간, 최종 연산과 기초 실습
 
@@ -267,6 +269,7 @@
 | `ch11/ex13` | 5. 사용자 화면 (Application.java) |
 | `ch11/ex14` | 5. 사용자 화면 (Application.java) |
 | `ch11/ex15` | 5. 사용자 화면 (Application.java) |
+| `ch11/ex16` | 7. 모범 정답 |
 
 ### 12장. 정리와 복습
 

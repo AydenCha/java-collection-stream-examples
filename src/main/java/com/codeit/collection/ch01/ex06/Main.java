@@ -12,12 +12,12 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] instanceof String) {
                 String s = (String) arr[i];
-                System.out.println(i + "번 칸은 문자열: " + s);
+                System.out.println(i + "번 칸은 문자열: " + s); // 0번 칸은 문자열: 문자열
             } else if (arr[i] instanceof Integer) {
                 Integer n = (Integer) arr[i];
-                System.out.println(i + "번 칸은 정수: " + n);
+                System.out.println(i + "번 칸은 정수: " + n);   // 1번 칸은 정수: 123
             } else {
-                System.out.println(i + "번 칸은 비어 있음"); // 아무것도 넣지 않은 칸은 null입니다.
+                System.out.println(i + "번 칸은 비어 있음"); // 2번 칸은 비어 있음 (아무것도 넣지 않은 칸은 null입니다)
             }
         }
 

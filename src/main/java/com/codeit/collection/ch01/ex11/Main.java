@@ -1,50 +1,28 @@
 // 파일 이름: Main.java
-// 컬렉션끼리 서로 바꾸는 예제입니다. Map의 put, get은 3장에서 자세히 배웁니다.
 package com.codeit.collection.ch01.ex11;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        // 1) List -> Set: 중복 제거
-        // Arrays.asList(...): 나열한 값으로 List를 만듭니다.
-        List<String> list = Arrays.asList("a", "b", "a");
-        Set<String> set = new HashSet<>(list);   // List를 넘겨 Set을 만들면 중복된 "a"가 하나만 남습니다.
-        System.out.println(set.size()); // 2
+        // 1-2에서 배열로 for 문을 직접 짜서 하던 일을 ArrayList는 메서드 하나로 합니다.
+        List<String> names = new ArrayList<>();
+        names.add("민지");   // 맨 뒤에 추가합니다.
+        names.add("지훈");
+        names.add("수현");
+        // 리스트를 println으로 출력하면 [요소, 요소] 모양으로 내용이 나옵니다.
+        System.out.println(names); // [민지, 지훈, 수현]
 
-        // 2) Set -> List: 순서 부여
-        // Set은 인덱스가 없지만 List로 옮기면 get(0)처럼 위치로 꺼낼 수 있습니다.
-        List<String> fromSet = new ArrayList<>(set);
-        System.out.println(fromSet.size()); // 2
+        // contains(값): 들어 있으면 true, 없으면 false
+        System.out.println(names.contains("지훈")); // true
+        // indexOf(값): 값이 있는 위치(0부터), 없으면 -1
+        System.out.println(names.indexOf("수현"));  // 2
+        System.out.println(names.indexOf("철수"));  // -1
 
-        // 3) Set -> Map: 요소를 key로, 가공한 결과를 value로
-        // Set.of(...): 나열한 값으로 Set을 만듭니다.
-        Set<String> fruits = Set.of("apple", "banana");
-        Map<String, Integer> fruitMap = new HashMap<>();
-        for (String fruit : fruits) {
-            fruitMap.put(fruit, fruit.length());   // 과일 이름을 key로, 글자 수를 value로 넣습니다.
-        }
-        System.out.println(fruitMap.get("apple"));  // 5
-        System.out.println(fruitMap.get("banana")); // 6
-
-        // 4) Map -> Set: keySet()
-        // keySet()은 Map의 key만 모아 Set으로 돌려줍니다. key는 중복될 수 없으므로 Set과 성질이 맞습니다.
-        Set<String> keys = fruitMap.keySet();
-        System.out.println(keys.contains("apple")); // true
-
-        // 5) List -> Map: 인덱스를 key로
-        // List.of(...): 나열한 값으로 List를 만듭니다.
-        List<String> names = List.of("민지", "지훈");
-        Map<Integer, String> byIndex = new HashMap<>();
-        for (int i = 0; i < names.size(); i++) {
-            byIndex.put(i, names.get(i));   // 0 -> 민지, 1 -> 지훈
-        }
-        System.out.println(byIndex.get(1)); // 지훈
+        // remove(값): 같은 값을 찾아 삭제하고, 뒤의 요소를 자동으로 앞으로 당깁니다.
+        names.remove("민지");
+        System.out.println(names);        // [지훈, 수현]
+        System.out.println(names.size()); // 2 (요소 개수)
     }
 }

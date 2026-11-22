@@ -8,7 +8,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         /*
-         * 1-4-1. 동적 크기 조절
+         * 1-4-3. 동적 크기 조절
          *
          * ArrayList는 내부적으로 배열을 사용하지만
          * 공간이 부족해지면 자동으로 더 큰 배열을 생성하고 복사합니다.
