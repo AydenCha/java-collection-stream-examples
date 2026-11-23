@@ -1,6 +1,6 @@
 package com.codeit.collection.minilms.domain;
 
-/** 수강 내역 한 건. Student, Course 객체 대신 학번과 강의 코드만 가진다. */
+/** 수강 내역 한 건. Student, Course 객체 대신 학번과 강의 코드만 가집니다. */
 public class Enrollment {
 
     private final long studentId;

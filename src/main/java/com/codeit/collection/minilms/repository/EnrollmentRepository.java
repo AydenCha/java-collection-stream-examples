@@ -4,7 +4,7 @@ import com.codeit.collection.minilms.domain.Enrollment;
 
 import java.util.List;
 
-/** DB 대신 List로 흉내 낸 수강 내역 저장소. 한 줄이 (학번, 강의 코드, 학기, 점수) 한 건이다. */
+/** DB 대신 List로 흉내 낸 수강 내역 저장소. 한 줄이 (학번, 강의 코드, 학기, 점수) 한 건입니다. */
 public class EnrollmentRepository {
 
     private static final List<Enrollment> ENROLLMENTS = List.of(

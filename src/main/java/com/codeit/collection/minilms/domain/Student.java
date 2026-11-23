@@ -1,6 +1,6 @@
 package com.codeit.collection.minilms.domain;
 
-/** 학생 한 명. 학번(studentId)으로 학생을 구분하고, 수강 내역(Enrollment)이 이 학번으로 학생을 가리킨다. */
+/** 학생 한 명. 학번(studentId)으로 학생을 구분하고, 수강 내역(Enrollment)이 이 학번으로 학생을 가리킵니다. */
 public class Student {
 
     private final long studentId;

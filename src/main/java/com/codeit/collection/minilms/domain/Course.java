@@ -1,6 +1,6 @@
 package com.codeit.collection.minilms.domain;
 
-/** 강의 하나. 강의 코드(courseCode)로 강의를 구분하고, 수강 내역(Enrollment)이 이 코드로 강의를 가리킨다. */
+/** 강의 하나. 강의 코드(courseCode)로 강의를 구분하고, 수강 내역(Enrollment)이 이 코드로 강의를 가리킵니다. */
 public class Course {
 
     private final String courseCode;

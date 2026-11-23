@@ -6,12 +6,12 @@
 
 - IntelliJ에서 이 폴더를 열고, 원하는 예제의 `Main` 클래스에서 `main` 메서드를 실행합니다.
 - 11장 종합 실습(MiniLMS)은 `./gradlew run`으로도 실행할 수 있습니다(Windows는 `gradlew.bat run`).
-- 실습 문제는 TODO가 적힌 뼈대 코드만 들어 있습니다. 정답은 수업에서 교안으로 제공합니다.
+- 실습 문제는 TODO가 적힌 뼈대 코드만 들어 있습니다. 11장 종합 실습(MiniLMS)의 모범 정답은 [minilms-answer](https://github.com/AydenCha/minilms-answer) 저장소에 있습니다.
 
 ## 구성
 
 - `src/main/java/com/codeit/collection/chNN/exMM/Main.java`: NN장의 MM번째 예제입니다. 교안의 코드 블록과 같은 코드이고, 파일 하나로 바로 실행됩니다.
-- `src/main/java/com/codeit/collection/minilms`: 11장 종합 실습 프로젝트의 뼈대입니다. domain, repository는 완성되어 있고 service와 Application의 TODO를 채웁니다.
+- `src/main/java/com/codeit/collection/minilms`: 11장 종합 실습 프로젝트의 뼈대입니다. domain, repository는 완성되어 있습니다. service의 메서드마다 무엇을 돌려줘야 하는지와 힌트를 주석으로 적어 두었으니, 본문을 채우고 Application의 TODO에서 호출합니다.
 
 ## 예제 목록
 
