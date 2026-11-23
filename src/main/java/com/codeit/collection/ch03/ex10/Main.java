@@ -1,38 +1,12 @@
-// 파일 이름: Main.java
 package com.codeit.collection.ch03.ex10;
 
-import java.util.HashSet;
-import java.util.Set;
+// 필요한 import는 직접 추가합니다.
 
 public class Main {
     public static void main(String[] args) {
-        /*
-         * ============================================================
-         * 4-1-2. 출석 체크 기록 (Set 사용)
-         * ============================================================
-         *
-         * 요구사항:
-         * - 중복 불가
-         * - 순서 중요하지 않음
-         *
-         * Set은 중복을 허용하지 않습니다.
-         * HashSet은 순서를 보장하지 않지만 많이 사용됩니다.
-         */
+        // TODO: 출석 기록을 담을 컬렉션을 만들고 "민지", "수현", "민지"를 차례로 넣으세요.
 
-        Set<String> attendance = new HashSet<>();
-
-        attendance.add("민지");
-        attendance.add("수현");
-        attendance.add("민지"); // 중복 -> 저장되지 않음
-
-        System.out.println(attendance.size()); // 2
-
-        // HashSet은 순서를 보장하지 않으므로 넣은 순서와 다르게 출력될 수 있습니다.
-        for (String name : attendance) {
-            System.out.println(name);
-        }
-        // 출력 (순서는 달라질 수 있습니다)
-        // 민지
-        // 수현
+        // TODO: 기록된 인원 수와 이름을 출력하세요.
+        // 예상 출력: 인원 수 2, 이름은 민지와 수현 (순서 무관)
     }
 }

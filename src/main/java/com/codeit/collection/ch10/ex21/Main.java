@@ -1,12 +1,9 @@
-// 파일 이름: Main.java
 package com.codeit.collection.ch10.ex21;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-// 학생 한 명: 이름, 성별, 학년, 점수
-// 성별과 학년은 그룹을 나누는 기준으로, 점수는 통계를 내는 대상으로 씁니다.
 class Student {
     private final String name;
     private final String gender;
@@ -20,13 +17,11 @@ class Student {
         this.score = score;
     }
 
-    // getter: groupingBy(Student::getGrade)처럼 기준 값을 메서드 참조로 꺼낼 때 씁니다.
     public String getName() { return name; }
     public String getGender() { return gender; }
     public int getGrade() { return grade; }
     public int getScore() { return score; }
 
-    // 결과를 출력했을 때 필드 값이 보이도록 toString()을 재정의합니다.
     @Override
     public String toString() {
         return "Student{name='" + name + "', gender='" + gender + "', grade=" + grade + ", score=" + score + "}";
@@ -44,19 +39,9 @@ public class Main {
                 new Student("문성실", "여", 1, 88)
         );
 
-        // 정답 1: 두 조건을 &&로 합칩니다.
-        String result = studentList.stream()
-                .filter(s -> s.getGrade() == 2 && s.getScore() >= 85)
-                .map(Student::getName)
-                .collect(Collectors.joining(", "));
-        System.out.println("2학년 85점 이상: " + result); // 2학년 85점 이상: 심사임당
+        // TODO: 2학년이면서 85점 이상인 학생의 이름만 ", "로 이어 붙이세요.
+        String result = "";
 
-        // 정답 2: filter를 두 번 씁니다. 결과는 같습니다.
-        String result2 = studentList.stream()
-                .filter(s -> s.getGrade() == 2)
-                .filter(s -> s.getScore() >= 85)
-                .map(Student::getName)
-                .collect(Collectors.joining(", "));
-        System.out.println(result.equals(result2)); // true
+        System.out.println("2학년 85점 이상: " + result);
     }
 }
