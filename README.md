@@ -11,7 +11,7 @@
 ## 구성
 
 - `src/main/java/com/codeit/collection/chNN/exMM/Main.java`: NN장의 MM번째 예제입니다. 교안의 코드 블록과 같은 코드이고, 파일 하나로 바로 실행됩니다.
-- `src/main/java/com/codeit/collection/minilms`: 11장 종합 실습 프로젝트의 뼈대입니다. domain, repository는 완성되어 있습니다. service의 메서드마다 무엇을 돌려줘야 하는지와 힌트를 주석으로 적어 두었으니, 본문을 채우고 Application의 TODO에서 호출합니다.
+- `src/main/java/com/codeit/collection/minilms`: 11장 종합 실습 프로젝트의 뼈대입니다. domain, repository, service 모두 뼈대만 있고, 파일마다 무엇을 어떻게 만들지 주석으로 적어 두었습니다. service는 메서드마다 무엇을 돌려줘야 하는지와 힌트를 주석으로 적어 두었으니, 본문을 채우고 Application의 TODO에서 호출합니다.
 
 ## 예제 목록
 

@@ -12,12 +12,14 @@ import com.codeit.collection.minilms.service.StudentService;
  * MiniLMS 종합 실습의 실행 클래스입니다. 서비스의 메서드를 호출해 결과를 출력합니다.
  *
  * 작업 순서
- * 1. domain, repository 패키지는 완성되어 있습니다. 먼저 읽어서 어떤 데이터가 있는지 확인합니다.
- * 2. service 패키지의 EnrollmentService, StudentService, CourseService에서 TODO가 적힌 메서드를 하나씩 구현합니다.
+ * 1. domain 패키지의 Student, Course, Enrollment를 완성합니다(교안 2절).
+ * 2. repository 패키지의 세 저장소에 샘플 데이터를 넣습니다(교안 3절).
+ * 3. service 패키지의 EnrollmentService, StudentService, CourseService에서 TODO가 적힌 메서드를 하나씩 구현합니다.
  *    메서드마다 무엇을 돌려줘야 하는지, 어떤 연산을 쓰면 되는지 주석에 적어 두었습니다.
- * 3. 메서드를 하나 구현할 때마다 이 파일의 해당 TODO를 채우고 실행해, 주석의 예상 출력과 비교합니다.
- * 4. 세 서비스를 마친 뒤 (옵션) ReportService를 구현합니다.
+ * 4. 메서드를 하나 구현할 때마다 이 파일의 해당 TODO를 채우고 실행해, 주석의 예상 출력과 비교합니다.
+ * 5. 세 서비스를 마친 뒤 (옵션) ReportService를 구현합니다.
  *
+ * 각 파일의 주석에 무엇을 어떻게 만들지 적어 두었습니다.
  * 아직 구현하지 않은 메서드를 호출하면 UnsupportedOperationException이 발생하고, 메시지에 구현할 메서드 이름이 나옵니다.
  * 실행: IntelliJ에서 main 메서드를 실행하거나, 터미널에서 ./gradlew run (Windows는 gradlew.bat run)
  */
